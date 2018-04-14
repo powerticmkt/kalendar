@@ -1,4 +1,4 @@
-<table id="<%= calendar_id %>" class="table table-bordered table-responsive<%= calendar_class %>">
+<table id="<%= calendar_id %>" class="table table-responsive <%= calendar_class %>">
   <caption><%= l(calendar.date, format: :"kalendar.caption") %></caption>
   <thead>
     <tr>
@@ -11,7 +11,6 @@
       <% end %>
     </tr>
   </thead>
-
   <tbody>
     <% calendar.each_week do |week| %>
       <tr>
