@@ -1,5 +1,4 @@
-<table id="<%= calendar_id %>" class="table table-responsive <%= calendar_class %>">
-  <caption><%= l(calendar.date, format: :"kalendar.caption") %></caption>
+<table id="<%= calendar_id %>" class="table table-bordered <%= calendar_class %>">
   <thead>
     <tr>
       <% calendar.each_week_day do |day| %>
