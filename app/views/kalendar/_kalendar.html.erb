@@ -14,8 +14,7 @@
     <% calendar.each_week do |week| %>
       <tr>
         <% week.each_day do |day| %>
-        <% futurecss = "day-in-past" %>
-        <% futurecss = "day-in-future" if day > Date.today %>
+        <% futurecss = "day-in-future" if day > Date.today  else "day-in-past" end %>
           <td class="<%= day.meta.join(" ") %> <%= futurecss %>">
             <time class="date" datetime="<%= day.format %>">
               <%= l(day.date, format: :"kalendar.day") %>
